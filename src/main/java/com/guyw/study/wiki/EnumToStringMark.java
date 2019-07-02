@@ -56,7 +56,7 @@ public class EnumToStringMark {
             if (StringUtils.isBlank(temp)){
                 continue;
             }
-            if (!temp.contains("(") || !temp.contains(")")){
+            if (!temp.contains("(") || !temp.contains(")") || !temp.endsWith(",")){
                 continue;
             }
             temp = temp.substring(temp.indexOf("(")+1,temp.lastIndexOf(")")).replaceAll(" ","");
